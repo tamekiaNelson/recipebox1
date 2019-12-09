@@ -1,0 +1,12 @@
+<h1> Tamekia Recipe Book </h1>
+
+Cool Recipes.
+
+<ul>
+    {% for foo in data%}
+    <li> {{ foo.title }} , by {{ foo.author }}
+    <ul>
+        <li> {{ foo.description }} </li>
+    </ul>
+    {% endfor %}
+<ul/>

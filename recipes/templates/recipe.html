@@ -1,0 +1,14 @@
+<h1> Recipe List </h1>
+
+Cool Recipes.
+
+<ul>
+    {% for foo in data%}
+    <li> {{ foo.title }} , by {{ foo.author }}
+    <ul>
+        <li> {{ foo.description }} </li>
+        <li> {{ foo.instructions }} </li>
+        <li> {{ foo.post_date }} </li>
+    </ul>
+    {% endfor %}
+<ul/>

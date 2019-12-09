@@ -1,0 +1,12 @@
+<h1> Recipe Book Authors </h1>
+
+Meet the Authors
+
+<ul>
+    {% for foo in data%}
+    <li> {{ foo.name}}
+    <ul>
+        <li> {{ foo.bio }} </li>
+    </ul>
+    {% endfor %}
+<ul/>
