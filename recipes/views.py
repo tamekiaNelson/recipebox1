@@ -11,7 +11,7 @@ def index(request):
 def author(request, id):
     author_html = "author.html"
     authors = Author.objects.filter(id=id)
-    recipes = Recipe.objects.filter(authors=id)
+    recipes = Recipe.objects.filter(author=id)
     return render(request, author_html, {"data": authors, "recipes": recipes})
 
 

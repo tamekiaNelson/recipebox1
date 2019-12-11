@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 
 class Author(models.Model):
@@ -14,7 +15,7 @@ class Recipe(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     instructions = models.TextField()
-    post_time = models.DateTimeField()
+    post_time = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return f"{self.title} - {self.author.name}"

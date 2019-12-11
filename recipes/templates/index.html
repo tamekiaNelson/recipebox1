@@ -1,12 +1,17 @@
-<h1> Tamekia Recipe Book </h1>
-
-Cool Recipes.
+<h1> Tamekia's Recipe Book of Recipes </h1>
+<h4>literally no one asked for this... </h4>
+<h4>literally no one... </h4>
+<h4>not a single student... </h4>
+<h2>Joe, hey let's get some cool Recipes!!</h2>
+<h5> Tamekia, against everything she believes in creates this awesome Django project with the help of literally everyone on earth!</h5>
+<h3> Presenting....</h3>
+<h1> Cool Recipes </h1>
 
 <ul>
-    {% for foo in data%}
-    <li> {{ foo.title }} , by {{ foo.author }}
-    <ul>
-        <li> {{ foo.description }} </li>
-    </ul>
+    {% for foo in data %},
+    <li> <b> Recipe Title: </b><a href='recipe/{{ foo.id }}/'> {{ foo.title }} </a> 
+    , <b>Master of the Foods: </b> <a href='author/{{ foo.id }}/'> {{ foo.author }}</a>
+    </li>
+     
     {% endfor %}
-<ul/>
+</ul>

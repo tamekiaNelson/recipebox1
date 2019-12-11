@@ -1,14 +1,15 @@
 <h1> Recipe List </h1>
 
-Cool Recipes.
+<h2>Cool Recipes. </h2>
 
 <ul>
-    {% for foo in data%}
-    <li> {{ foo.title }} , by {{ foo.author }}
+    {% for foo in data %}
+    <li> <b>Recipe Title: </b> {{ foo.title }} , <b> Master Creation By: </b> {{ foo.author }} </li>
     <ul>
-        <li> {{ foo.description }} </li>
-        <li> {{ foo.instructions }} </li>
-        <li> {{ foo.post_date }} </li>
+        <li> <b>Description:</b> {{ foo.description }} </li>
+        <li> <b>What to do:</b> {{ foo.instructions }} </li>
+        {% comment %} <li> {{ foo.post_date }} </li> {% endcomment %}
+     {% comment %} <a href='/author/{{ foo.id }}/'> {{ foo.author }} </a>  {% endcomment %}
     </ul>
     {% endfor %}
 <ul/>

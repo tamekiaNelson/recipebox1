@@ -1,12 +1,20 @@
-<h1> Recipe Book Authors </h1>
+<h1> Recipe Book of Authors </h1>
 
-Meet the Authors
+<h2> Meet the Authors </h2>
 
 <ul>
-    {% for foo in data%}
-    <li> {{ foo.name}}
+    {% for foo in data %}
+    <li> <b>Author: </b>{{ foo.name }} </li>
     <ul>
-        <li> {{ foo.bio }} </li>
+        <li> <b>Short Bio: </b>{{ foo.bio }} </li>
+             
     </ul>
     {% endfor %}
+
+    {% for recipe in recipes %}
+   <ul>
+        <li> <b>Recipe Title: </b> <a href='/recipe/{{ recipe.id }}/'> {{ recipe.title }} </a> </li>
+    </ul> 
+    {% endfor %}
 <ul/>
+
