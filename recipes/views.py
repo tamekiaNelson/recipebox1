@@ -47,6 +47,7 @@ def authoraddview(request):
     return render(request, authoraddview_html, {form: form})
 
 
+@login_required
 def recipeaddview(request):
     recipeaddview_html = "generic_form.html"
     if request.method == "POST":
