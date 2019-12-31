@@ -44,7 +44,7 @@ def authoraddview(request):
             )
             return HttpResponseRedirect(reverse('homepage'))
     form = AuthordAdd()
-    return render(request, authoraddview_html, {form: form})
+    return render(request, authoraddview_html, {'form': form})
 
 
 @login_required
@@ -63,7 +63,7 @@ def recipeaddview(request):
             )
             return HttpResponseRedirect(reverse('homepage'))
     form = RecipeAdd()
-    return render(request, recipeaddview_html, {form: form})
+    return render(request, recipeaddview_html, {'form': form})
 
 
 def login_view(request):
@@ -82,7 +82,7 @@ def login_view(request):
                     request.GET.get('next', reverse('homepage'))
                 )
     form = LoginForm()
-    return render(request, loginview_html, {form: form})
+    return render(request, loginview_html, {'form': form})
 
 
 def logout_view(request):
