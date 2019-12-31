@@ -41,7 +41,7 @@ def authoraddview(request):
             )
             return HttpResponseRedirect(reverse('homepage'))
     form = AuthordAdd()
-    return render(request, authoraddview_html, {form: form})
+    return render(request, authoraddview_html, {'form': form})
 
 
 def recipeaddview(request):
@@ -59,4 +59,4 @@ def recipeaddview(request):
             )
             return HttpResponseRedirect(reverse('homepage'))
     form = RecipeAdd()
-    return render(request, recipeaddview_html, {form: form})
+    return render(request, recipeaddview_html, {'form': form})
