@@ -33,12 +33,7 @@ def authoraddview(request):
         form = AuthordAdd(request.POST)
         if form.is_valid():
             data = form.cleaned_data
-            u = User.objects.create_user(
-                username=data["name"],
-                password=data["password"]
-            )
             Author.objects.create(
-                user=u,
                 name=data["name"],
                 bio=data.get("bio")
             )
