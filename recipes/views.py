@@ -53,7 +53,7 @@ def recipeaddview(request):
                 author=data["author"],
                 title=data["title"],
                 description=data["description"],
-                instructions=data["instuctions"],
+                instructions=data["instructions"],
                 post_time=timezone.now()
             )
             return HttpResponseRedirect(reverse('homepage'))
